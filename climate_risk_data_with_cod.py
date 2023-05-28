@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import os
 import pandas
 import uuid
+import random
 
 def get_cod_api_token(api_userID, api_password, api_tenantID):
     url = api_baseURL + '/sml/auth/v1/Login/implicit'
@@ -51,7 +52,9 @@ api_job_data = {"m": "P.2023.1",
                     "th": "2030",
                     "facilities": []}
 j=0
-for i in data[0]:
+while (j<100):
+    random_number = random.randint(1, 50)
+    i = data[0][random_number]
     try:
         api_job_data['facilities'].append({
         "id": str(uuid.uuid4()),
@@ -61,13 +64,11 @@ for i in data[0]:
         "city": i['city'],
         "state": i['state'],
         "country": 'USA'
-        })
-        j=j+1
-        if j > 50:
-            break
+        })    
     except:
         # ignore errors and move to next line
         pass
+    j=j+1
 # kick off cod climate  job
 api_jobID = kick_off_cod_lookup_job(api_tokenID, api_job_data)
 
