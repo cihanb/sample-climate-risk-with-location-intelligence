@@ -37,6 +37,7 @@ api_baseURL = os.getenv("baseURL")
 api_userID = os.getenv("userID")
 api_password = os.getenv("password")
 api_tenantID = os.getenv("tenantName")
+api_totalLocs = int(os.getenv("totalLocations"))
 
 # read random addresses
 with open('sample-data/addresses-us-all.min.json') as f:
@@ -52,8 +53,8 @@ api_job_data = {"m": "P.2023.1",
                     "th": "2030",
                     "facilities": []}
 j=0
-while (j<100):
-    random_number = random.randint(1, 50)
+while (j<api_totalLocs):
+    random_number = random.randint(1, api_totalLocs)
     i = data[0][random_number]
     try:
         api_job_data['facilities'].append({
@@ -61,6 +62,7 @@ while (j<100):
         "name": str(uuid.uuid4()),
         "activity": "Office",
         "street1": i['address1'],
+        "street2": i['address2'],
         "city": i['city'],
         "state": i['state'],
         "country": 'USA'
@@ -76,8 +78,10 @@ api_jobID = kick_off_cod_lookup_job(api_tokenID, api_job_data)
 cod_data = get_cod_data(api_tokenID, api_jobID)
 
 # convert to pandas dataframe
-df = pandas.json_normalize(cod_data, record_path=['output'])
-df.to_csv('cod_output.csv', index=False)
-
+df_input = pandas.json_normalize(api_job_data, record_path=['facilities'])
+df_output = pandas.json_normalize(cod_data, record_path=['output'])
+df_merged = pandas.merge(df_input, df_output, on='id')
+df_merged.to_csv('cod_output.csv', index=False)
+print('cod_output.csv created. open file to see imapct scores and financial metrics for climate and climate change impact.')
 
 
