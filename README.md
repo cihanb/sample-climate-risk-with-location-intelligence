@@ -1,4 +1,4 @@
-# Sample : Analyzing climate-risk with Moody's Climate on Demand
+# Analyzing climate risk with Moody's Climate on Demand
 Climate and climate change is increasingly an important element to capture for anyone looking to get a full understanding risk. Moody's Climate on Demand (https://climate.moodys.com/climate-on-demand) provides fiancial loss metrics, as well as impact scores for climate and climate change related risks. Climate on Demand data help anyone incorperate risk from nature-made perils including floods, wildfires, wind-storms, earhquakes as well as heat-stress, water-stress and sea-level rise, and help translate physical climate risk into financial impact for a given location and portfolio.
 
 ![cod-screenshot](cod-screenshot.png)
