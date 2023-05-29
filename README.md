@@ -8,5 +8,12 @@ This sample show how using the Moody's Climate on Demand product, one can retrie
 To get started, ensure you set up your env (env_setup.sh for bash users) and run the climate_risk_data_with_cod.py.
 The sample uses a small list of random addresses to build a job, then retrieve climate risk scores, and finally  saves the output to a cod_output.csv file.
 
+# Getting Started
+Ensure to have pandas, python_loadenv, requests available in your python env (or run env_setup.sh). And ensure to have credentials for Moody's Climate on Demand. Copy sample.env to .env and specify the following settings in the ".env" file. 
+userID = 'your_CoD_username/email'
+password = 'your_CoD_password'
+baseURL = 'your_URL_for_CoD' 
+tenantName = 'your_CoD_tenant_name' 
+
 Enjoy.
 
