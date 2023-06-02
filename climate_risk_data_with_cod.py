@@ -50,7 +50,7 @@ api_tokenID = get_cod_api_token(api_userID, api_password, api_tenantID)
 # build cod climate job
 api_job_data = {"m": "P.2023.1",
                     "rcp": "rcp8.5",
-                    "th": "2030",
+                    "th": "2050",
                     "facilities": []}
 j=0
 while (j<api_totalLocs):
@@ -60,18 +60,19 @@ while (j<api_totalLocs):
         api_job_data['facilities'].append({
         "id": str(uuid.uuid4()),
         "name": str(uuid.uuid4()),
-        "activity": "Office",
+        "activity": "Data Center",
         "street1": i['address1'],
         "street2": i['address2'],
         "city": i['city'],
         "state": i['state'],
-        "country": 'USA'
+        "country": 'USA',
+        "exposure_value": 1000000
         })    
     except:
         # ignore errors and move to next line
         pass
     j=j+1
-# kick off cod climate  job
+# kick off cod climate job
 api_jobID = kick_off_cod_lookup_job(api_tokenID, api_job_data)
 
 # retrieve the results
