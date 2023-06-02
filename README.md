@@ -17,13 +17,13 @@ password = 'your_CoD_password'
 baseURL = 'your_URL_for_CoD' 
 tenantName = 'your_CoD_tenant_name' 
 ```
-Introducing Moody's Climate on Demand
+
+# Introducing Moody's Climate on Demand
 Climate on Demand comes with two editions. 
-- Climate on Demand Standard Edition provides basic climate risk scores and climate change risk scores all the way to year 2100 based on hazard intensity. This edition is great for anyone looking to understand where climate and climate change risk is greatest in their portfolios. How that will change over time with the impact of climate change for each location and so on.
+- Climate on Demand Standard Edition provides climate risk scores and climate change risk scores all the way to year 2100 based on hazard intensity. This edition is great for anyone looking to understand where climate and climate change risk is greatest in their portfolios. How that will change over time with the impact of climate change for each location and so on.
 - Climate on Demand Pro Edition provides advanced climate risk impact scores and financial metrics as well as climate change financial metrics all the way to year 2100 based on loss experience Moody’s RMS has modeled. RMS’s superior science in understanding damage and financial loss comes from its cooperation with the Insurance Industry and 3 decades of historical claims experience that validate how hazards impact assets and how assets vulnerabilities result in financial loss. 
 
-You can read more about how RMS’s science and experience in building models turn into the Climate on Demand Pro metrics here: https://www.moodysanalytics.com/articles/2023/climate-on-demand-our-vision-for-quantifying-climate-impacts and find roadmap for Climate on Demand here: https://www.moodysanalytics.com/articles/2023/moodys-climate-on-demand-version-2-the-road-ahead-for-2023-and-beyond 
-
+You can read more about how RMS’s science and experience in building models turn into the Climate on Demand Pro metrics [here](https://www.moodysanalytics.com/articles/2023/quantifying-financial-impact-of-climate-risk-with-moodys-climate-on-demand) and [here](https://www.moodysanalytics.com/articles/2023/climate-on-demand-our-vision-for-quantifying-climate-impacts) and find roadmap for Climate on Demand [here](https://www.moodysanalytics.com/articles/2023/moodys-climate-on-demand-version-2-the-road-ahead-for-2023-and-beyond). 
 
 Enjoy.
 
