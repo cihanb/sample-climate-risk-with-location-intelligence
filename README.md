@@ -3,7 +3,7 @@ Climate and climate change is increasingly an important element to capture for a
 
 ![cod-screenshot](cod-screenshot.png)
 
-This sample show how using the Moody's Climate on Demand product, one can retrieve data for a set of locations/addresses the associated risk in the form of average-annual-loss for each of the nature-made perils. 
+This sample show how, using the Moody's Climate on Demand product, one can retrieve data for a set of locations/addresses the associated risk in the form of average-annual-loss for each of the nature-made perils. 
 
 To get started, ensure you set up your env (env_setup.sh for bash users) and run the climate_risk_data_with_cod.py.
 The sample uses a small list of random addresses to build a job, then retrieve climate risk scores, and finally  saves the output to a cod_output.csv file.
