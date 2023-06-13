@@ -1,14 +1,14 @@
 # Analyzing climate risk with Moody's Climate on Demand
 Climate and climate change is increasingly an important element to capture for anyone looking to get a full understanding risk on their asset portfolios. Moody's Climate on Demand (https://climate.moodys.com/climate-on-demand) provides financial loss metrics, as well as impact scores for climate and climate change related risks. Climate on Demand data help anyone incorporate risk from nature-made perils including floods, wildfires, wind-storms, earthquakes as well as heat-stress, water-stress and sea-level rise, and help translate physical climate risk into financial impact for a given location and portfolio.
 
-![cod-screenshot](cod-screenshot.png)
+<img src="https://github.com/cihanb/sample-climate-risk-with-location-intelligence/blob/main/images/cod-screenshot.png?raw=true" width="500" />
 
 This sample show how, using the Moody's Climate on Demand product, one can retrieve data for a set of locations/addresses the associated risk in the form of average-annual-loss for each of the nature-made perils. 
 
 To get started, ensure you set up your env (env_setup.sh for bash users) and run the climate_risk_data_with_cod.py.
 The sample uses a small list of random addresses to build a job, then retrieve climate risk scores, and finally  saves the output to a cod_output.csv file.
 
-![cod-output-screenshot](cod-output-screenshot.png)
+![cod-output-screenshot](images/cod-output-screenshot.png)
 
 # Getting Started
 Ensure to have pandas, python_loadenv, requests available in your python env (or run env_setup.sh). And ensure to have credentials for Moody's Climate on Demand. Copy sample.env to .env and specify the following settings in the ".env" file. 
