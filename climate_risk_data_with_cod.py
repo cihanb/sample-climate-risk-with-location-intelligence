@@ -48,6 +48,7 @@ with open('sample-data/addresses-us-all.min.json') as f:
 api_tokenID = get_cod_api_token(api_userID, api_password, api_tenantID)
 
 # build cod climate job
+print('building CoD job...')
 api_job_data = {"m": "P.2023.1",
                     "rcp": "rcp8.5",
                     "th": "2050",
@@ -73,9 +74,11 @@ while (j<api_totalLocs):
         pass
     j=j+1
 # kick off cod climate job
+print('kicking off CoD job...')
 api_jobID = kick_off_cod_lookup_job(api_tokenID, api_job_data)
 
 # retrieve the results
+print('retrieving results from CoD...')
 cod_data = get_cod_data(api_tokenID, api_jobID)
 
 # convert to pandas dataframe
