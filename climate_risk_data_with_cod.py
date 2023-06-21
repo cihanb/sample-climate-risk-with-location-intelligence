@@ -49,9 +49,9 @@ api_tokenID = get_cod_api_token(api_userID, api_password, api_tenantID)
 
 # build cod climate job
 print('building CoD job...')
-api_job_data = {"m": "P.2023.1",
-                    "rcp": "all",
-                    "th": "all",
+api_job_data = {"m": os.getenv("methodologyVersion"),
+                    "rcp": os.getenv("rcpScenario"),
+                    "th": os.getenv("timeHorizon"),
                     "facilities": []}
 j=0
 while (j<api_totalLocs):
